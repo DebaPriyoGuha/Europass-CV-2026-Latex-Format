@@ -1,0 +1,334 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{multicol}
+
+% --- Color Definitions ---
+\definecolor{euroblue}{RGB}{14, 65, 148}
+\definecolor{euroaqua}{RGB}{96, 150, 183}
+\definecolor{darkgray}{RGB}{60, 60, 60}
+\definecolor{lightgray}{RGB}{120, 120, 120}
+
+% --- Hyperlink Setup ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=euroaqua,
+    filecolor=euroaqua,      
+    urlcolor=euroaqua,
+}
+
+% --- Section Formatting ---
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{black}}
+  {\tikz\draw[euroblue, fill=euroblue] (0,0) circle (0.7ex);}
+  {0.5em}
+  {\MakeUppercase}
+  [\vspace{-0.1em}{\color{euroblue}\titlerule[1pt]}]
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+% ================= HEADER =================
+\begin{minipage}[t]{0.18\textwidth}
+    \vspace{0pt}
+    \begin{tikzpicture}
+        \draw[euroaqua, line width=2.5pt] (0,0) circle (1.6cm);
+        \node[circle, inner sep=0pt, minimum size=3cm, path picture={
+            \node at (path picture bounding box.center) {
+                \includegraphics[width=3cm]{profile_pic.jpg}
+            };
+        }] {};
+    \end{tikzpicture}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.80\textwidth}
+    \vspace{0pt}
+    
+    {\fontsize{22}{26}\selectfont \textbf{\color{darkgray} Deba Priyo Guha}}
+    
+    \vspace{0.3em}
+    {\color{euroblue}\hrule height 1pt} \vspace{0.5em}
+    
+    \small
+    Date of birth: 
+    \hspace{0.2cm}|\hspace{0.2cm} Nationality: Bangladeshi \hspace{0.2cm}|\hspace{0.2cm} Gender: Male \\[0.3em]
+    (+880) 1820 ****** \hspace{0.2cm}|\hspace{0.2cm} \href{mailto:debapriyoguha@gmail.com}{debapriyoguha@gmail.com} \\[0.3em]
+    \href{https://www.linkedin.com/in/debapriyoguha}{LinkedIn} \hspace{0.2cm}|\hspace{0.2cm} \href{https://github.com/debapriyoguha}{GitHub} \hspace{0.2cm}|\hspace{0.2cm} \href{https://www.researchgate.net/profile/Deba-Priyo-Guha}{ResearchGate} \\[0.3em]
+    Chattogram, Bangladesh
+    
+    \vspace{0.5em}
+    About me:\\
+    Aspiring astrophysicist with a strong foundation in machine learning and scientific computing. Experienced in developing physics informed deep learning frameworks for astronomical transient classification and radio galaxy morphology analysis. Selected for Bangladesh National Team for International Olympiad on Astronomy \& Astrophysics (2017). Passionate about applying computational methods to unlock the mysteries of the universe.
+\end{minipage}
+
+% === LOGO ===
+\begin{tikzpicture}[remember picture, overlay]
+    \node at ([xshift=-3.6cm, yshift=-1.9cm]current page.north east) {
+        \includegraphics[height=4.2cm]{europass_logo.png}
+    };
+\end{tikzpicture}
+
+\vspace{0.3cm}
+
+% ================= RESEARCH INTERESTS =================
+\section{Research Interests}
+\vspace{0.3em}
+\textbf{Astrophysics \& Cosmology:} Astronomical transient detection and classification, radio galaxy morphology, multi wavelength astronomy, time domain astrophysics \\[0.2em]
+\textbf{Machine Learning for Science:} Physics informed deep learning, vision language models for astronomy, interpretable AI for scientific discovery \\[0.2em]
+\textbf{Methods:} Semi supervised learning, transformer architectures, hyperspectral image analysis, multimodal AI systems
+
+\vspace{0.3cm}
+
+% ================= EDUCATION =================
+\section{Education}
+\vspace{0.3em}
+
+{\color{lightgray}\footnotesize Feb 2019 – Aug 2024 | Rajshahi, Bangladesh}\\[0.15em]
+{\large \textbf{BACHELOR OF SCIENCE IN ENGINEERING}} – Rajshahi University of Engineering \& Technology (RUET) \\
+Department of Electrical \& Computer Engineering (ECE) | \href{https://ruet.ac.bd/}{ruet.ac.bd}\\
+{\color{euroblue}\hrule height 0.5pt} \vspace{0.3em}
+\begin{itemize}[leftmargin=*, nosep, label=$\circ$, itemsep=0.15em]
+    \item CGPA: 2.88/4.00
+    \item \textbf{Thesis:} "PIE-ADA: Physics Informed Ensemble with Adaptive Data Augmentation for Photometric Transient Classification" | Supervisor: Fariya Tabassum
+    \item \textbf{Relevant Coursework:} Neural Networks \& Fuzzy Systems, Digital Signal Processing, Pattern Recognition, Data Structures \& Algorithms, Probability \& Statistics, Electromagnetic Field Theory, Communication Systems
+\end{itemize}
+
+\vspace{0.35cm}
+
+{\color{lightgray}\footnotesize 2016 – 2018 | Chattogram, Bangladesh}\\[0.15em]
+{\large \textbf{HIGHER SECONDARY SCHOOL CERTIFICATE (HSC)}} – Govt. City College Chattogram | \href{https://gccc.edu.bd/}{gccc.edu.bd}\\
+{\color{euroblue}\hrule height 0.5pt} \vspace{0.3em}
+\begin{itemize}[leftmargin=*, nosep, label=$\circ$, itemsep=0.15em]
+    \item GPA: 4.83/5.00 | Group: Science
+\end{itemize}
+
+\vspace{0.35cm}
+
+{\color{lightgray}\footnotesize 2010 – 2016 | Chattogram, Bangladesh}\\[0.15em]
+{\large \textbf{SECONDARY SCHOOL CERTIFICATE (SSC)}} – Nasirabad Govt. High School | \href{https://nghs.tsmts.com/}{nghs.tsmts.com}\\
+{\color{euroblue}\hrule height 0.5pt} \vspace{0.3em}
+\begin{itemize}[leftmargin=*, nosep, label=$\circ$, itemsep=0.15em]
+    \item GPA: 5.00/5.00 | Group: Science
+\end{itemize}
+
+\vspace{0.35cm}
+
+% {\color{lightgray}\footnotesize 2003 – 2009 | Chattogram, Bangladesh}\\[0.15em]
+% {\large \textbf{PRIMARY EDUCATION}} – St. Xavier's School, Chattogram | \href{https://www.sxsctg.edu.bd/}{sxsctg.edu.bd}\\
+% {\color{euroblue}\hrule height 0.5pt} \vspace{0.3em}
+
+% \vspace{0.35cm}
+
+\textbf{Language Proficiency:} IELTS Academic Overall 7.0 (Listening: 8.0, Reading: 7.5, Writing: 6.5, Speaking: 6.0) | Test Date: Sept 2025
+
+\vspace{0.3cm}
+
+% ================= RESEARCH EXPERIENCE =================
+\section{Research Experience}
+\vspace{0.3em}
+
+{\color{lightgray}\footnotesize Oct 2025 – Present | Dhaka, Bangladesh}\\[0.15em]
+{\large \textbf{POSTBACCALAUREATE RESEARCH INTERN}} – Center for Astronomy, Space Science \& Astrophysics (CASSA), Independent University, Bangladesh \\
+{\color{euroblue}\hrule height 0.5pt} \vspace{0.3em}
+\textit{Supervisor: Dr. Khan Muhammad Bin Asad | \href{https://cassa.site}{cassa.site}}
+\begin{itemize}[leftmargin=*, nosep, label=$\circ$, itemsep=0.15em]
+    \item \textbf{RGC v2.0 Project:} Developing hierarchical radio AGN classifier for bent morphologies (Wide Angle Tail, Narrow Angle Tail) using 20,000+ LOFAR/LoTSS and VLA/FIRST images
+    \item Implementing semi supervised learning frameworks and spurious source filtering algorithms for radio astronomical surveys
+    \item \textbf{Vision LLM for Multi Wavelength Astronomy:} Building multimodal AI system ingesting galaxy images across optical, IR, radio, and X ray bands for automated astrophysical characterization
+    \item Gaining expertise in radio interferometry, large scale astronomical survey processing, and full ML research pipeline
+\end{itemize}
+
+\vspace{0.35cm}
+
+{\color{lightgray}\footnotesize 2024 – Present | Rajshahi, Bangladesh}\\[0.15em]
+{\large \textbf{RESEARCH COLLABORATOR}} – Young Learners' Research Lab, Department of CSE, RUET \\
+{\color{euroblue}\hrule height 0.5pt} \vspace{0.3em}
+\textit{Supervisor: Md. Azmain Yakin Srizon (Assistant Professor)}
+\begin{itemize}[leftmargin=*, nosep, label=$\circ$, itemsep=0.15em]
+    \item \textbf{LunaXNet Project:} Developing hybrid CNN Transformer framework for lunar mineralogical segmentation from Chandrayaan 1 M3 hyperspectral data (85 spectral bands, 430–3000 nm)
+    \item Implementing Grad CAM based interpretability analysis for olivine, pyroxene, and plagioclase identification on lunar surface
+\end{itemize}
+
+\vspace{0.35cm}
+
+{\color{lightgray}\footnotesize Jan 2024 – Aug 2024 | Rajshahi, Bangladesh}\\[0.15em]
+{\large \textbf{UNDERGRADUATE THESIS RESEARCHER}} – Department of ECE, RUET \\
+{\color{euroblue}\hrule height 0.5pt} \vspace{0.3em}
+\textit{Supervisor: Fariya Tabassum (Assistant Professor \& Head, ECE Department)}
+\begin{itemize}[leftmargin=*, nosep, label=$\circ$, itemsep=0.15em]
+    \item Developed \textbf{PIE-ADA} (Physics Informed Ensemble with Adaptive Data Augmentation) for photometric transient classification targeting LSST survey
+    \item Implemented astrophysically constrained synthetic data generation: time dilation, interstellar extinction, correlated noise injection
+    \item Extracted 271 multi scale features from PLAsTiCC dataset (7,848 objects, 14 classes: supernovae Ia/II/Ibc, kilonovae, AGN, TDEs)
+    \item Achieved weighted log loss of 0.5759 and 80.38\% accuracy, outperforming baselines by 32–48\%
+\end{itemize}
+
+\vspace{0.3cm}
+
+% ================= PUBLICATIONS =================
+\section{Publications \& Manuscripts}
+\vspace{0.3em}
+
+\textbf{In Preparation (First Author):}
+\begin{itemize}[leftmargin=*, nosep, label=$\circ$, itemsep=0.15em]
+    \item \textbf{D. P. Guha}, F. Akter, F. Tabassum, "PIE-ADA: Physics Informed Ensemble with Adaptive Data Augmentation for Photometric Transient Classification," Target: \textit{Monthly Notices of the Royal Astronomical Society}
+    \item \textbf{D. P. Guha}, M. A. Y. Srizon, et al., "LunaXNet: Pre Post AI Framework for Mineralogical Segmentation from Lunar Hyperspectral Data," Target: \textit{IEEE Trans. Geoscience \& Remote Sensing}
+\end{itemize}
+
+\vspace{0.2em}
+\textbf{In Preparation (Co Author):}
+\begin{itemize}[leftmargin=*, nosep, label=$\circ$, itemsep=0.15em]
+    \item M. S. H. Shahal, A. Khan, \textbf{D. P. Guha}, K. M. B. Asad, et al., "RGC v2.0: Hierarchical Multi Class Classification of Radio AGN Morphologies," Target: \textit{Astronomy \& Astrophysics}
+    \item M. S. Hossain, et al., \textbf{D. P. Guha}, K. M. B. Asad, et al., "Vision Language Models for Multi Wavelength Galaxy Characterization," Target: \textit{The Astrophysical Journal Supplement Series}
+\end{itemize}
+
+\vspace{0.3cm}
+
+% ================= HONORS & AWARDS =================
+\section{Honors \& Awards}
+\vspace{0.3em}
+
+\textbf{\color{euroblue}International Astronomy \& Physics Achievements}
+\begin{itemize}[leftmargin=*, nosep, label=$\circ$, itemsep=0.15em]
+    \item \textbf{2017: Bangladesh National Team Selection} – 11th International Olympiad on Astronomy \& Astrophysics (IOAA), Phuket, Thailand | Selected as 1 of 5 national representatives
+    \item \textbf{2023: Silver Medal} – University Physics Competition (International) | 48 hour advanced theoretical physics problem
+    \item \textbf{2022: Accomplished Winner} – University Physics Competition (International)
+    \item \textbf{2020: Silver Medal} – University Physics Competition (International)
+    \item \textbf{2021: Bronze Honor} – International Astronomy \& Astrophysics Competition (IAAC)
+    \item \textbf{2021: Bronze Honor} – International Youth Math Challenge (IYMC)
+    \item \textbf{2020: Silver Honor} – International Youth Math Challenge (IYMC)
+\end{itemize}
+
+\vspace{0.25cm}
+
+\textbf{\color{euroblue}National Olympiad Achievements}
+\begin{itemize}[leftmargin=*, nosep, label=$\circ$, itemsep=0.15em]
+    \item \textbf{2017: National Winner} – 12th Bangladesh Astro Olympiad | Selected for Bangladesh Team
+    \item \textbf{2018: Regional Champion} – 8th Bangladesh Physics Olympiad | Honorable Mention at National Round
+    \item \textbf{2023: Mathematics Winner} – National STEAM Olympiad, Bangladesh
+    \item \textbf{2021: Honorable Mention} – ICPC Asia Dhaka Regional Preliminary
+\end{itemize}
+
+\vspace{0.25cm}
+
+\textbf{\color{euroblue}Other Recognition}
+\begin{itemize}[leftmargin=*, nosep, label=$\circ$, itemsep=0.15em]
+    \item \textbf{2020: Role Model Award} – US Embassy Student Leadership Development Workshop, Dhaka
+    \item \textbf{2016: Outstanding Performance Award} – SSC Examination (GPA 5.00/5.00), Cambrian Education Group
+\end{itemize}
+
+\vspace{0.3cm}
+
+% ================= TECHNICAL SKILLS =================
+\section{Technical Skills}
+\vspace{0.3em}
+
+\textbf{Programming:} Python (TensorFlow, PyTorch, Keras, Scikit learn) \hspace{0.2cm}|\hspace{0.2cm} C/C++ \hspace{0.2cm}|\hspace{0.2cm} MATLAB \hspace{0.2cm}|\hspace{0.2cm} SQL \hspace{0.2cm}|\hspace{0.2cm} Bash \\[0.2em]
+\textbf{Machine Learning:} CNNs, Transformers (ViT, BERT), GANs/VAEs, Semi supervised learning, Vision language models (CLIP, BLIP) \\[0.2em]
+\textbf{Astronomy Tools:} Astropy, FITS handling, DS9, TOPCAT, Radio imaging (LOFAR/VLA), Multi wavelength cross matching \\[0.2em]
+\textbf{Computing:} Git/GitHub, Linux/Unix, HPC (SLURM), Jupyter, Google Colab, \LaTeX
+
+\vspace{0.3cm}
+
+% ================= PROFESSIONAL TRAINING =================
+\section{Professional Training}
+\vspace{0.3em}
+
+{\color{lightgray}\footnotesize May 2025}\\[0.15em]
+{\large \textbf{CASSA WORKSHOP: UNCLOUDING THOUSAND EYES OF ARRAY RADIO TELESCOPE}} \\
+{\color{euroblue}\hrule height 0.5pt} \vspace{0.3em}
+Radio interferometry fundamentals, LOFAR data processing pipelines, primary beam modeling with Python, HPC server usage
+
+\vspace{0.3cm}
+
+% ================= LEADERSHIP =================
+\section{Leadership \& Outreach}
+\vspace{0.3em}
+
+{\color{lightgray}\footnotesize June 2022 – May 2023}\\[0.15em]
+{\large \textbf{PRESIDENT}} – Astronomy \& Science Society of RUET (ASSR) \\
+{\color{euroblue}\hrule height 0.5pt} \vspace{0.3em}
+\begin{itemize}[leftmargin=*, nosep, label=$\circ$, itemsep=0.15em]
+    \item Led 50+ member organization; organized AURORA 2023 national science festival (500+ participants)
+    \item Conducted telescope observation sessions, astronomy seminars, and STEM outreach programs
+    \item Served as olympiad problem setter and judge for science competitions
+\end{itemize}
+
+\vspace{0.35cm}
+
+{\color{lightgray}\footnotesize 2019 – Present}\\[0.15em]
+{\large \textbf{ACADEMIC TEAM MEMBER}} – Bangladesh Mathematical/Physics/Astronomy Olympiads \\
+{\color{euroblue}\hrule height 0.5pt} \vspace{0.3em}
+\begin{itemize}[leftmargin=*, nosep, label=$\circ$, itemsep=0.15em]
+    \item Question creation and evaluation for BdMO, BdPhO, BDOAA (regional/national rounds)
+    \item Mentored students in olympiad training camps
+\end{itemize}
+
+\vspace{0.35cm}
+
+{\color{lightgray}\footnotesize Dec 2018 – Present}\\[0.15em]
+{\large \textbf{FOUNDER \& LEAD INSTRUCTOR}} – STEM by Priyojeet \\
+{\color{euroblue}\hrule height 0.5pt} \vspace{0.3em}
+\begin{itemize}[leftmargin=*, nosep, label=$\circ$, itemsep=0.15em]
+    \item Private tutoring in physics, mathematics, programming for 18+ students
+    \item Students achieved admissions to BUET, medical colleges, and top universities
+\end{itemize}
+
+\vspace{0.3cm}
+
+% ================= EXTRACURRICULAR =================
+\section{Extracurricular Activities}
+\vspace{0.3em}
+
+\begin{itemize}[leftmargin=*, nosep, label=$\circ$, itemsep=0.2em]
+    \item \textbf{Competitive Archer:} Active member, CTG Archery Club | 5th Position, 2nd Chittagong Open Archery Championship (2025)
+    \item \textbf{Competitive Programming:} 160+ problems solved on LeetCode, Codeforces, CodeChef, AtCoder
+\end{itemize}
+
+\vspace{0.3cm}
+
+% ================= REFERENCES =================
+\section{References}
+\vspace{0.3em}
+
+\begin{minipage}[t]{0.32\textwidth}
+    \textbf{Khan Muhammad Bin Asad, PhD}\\
+    Assistant Professor \& Director\\
+    CASSA, IUB, Bangladesh\\
+    \href{mailto:kasad@iub.edu.bd}{kasad@iub.edu.bd}\\
+    (+880) 1320 767186
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.32\textwidth}
+    \textbf{Md. Azmain Yakin Srizon}\\
+    Assistant Professor\\
+    Department of CSE, RUET\\
+    \href{mailto:azmainsrizon@cse.ruet.ac.bd}{azmainsrizon@cse.ruet.ac.bd}\\
+    (+880) 1790 187189
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.32\textwidth}
+    \textbf{Fariya Tabassum}\\
+    Assistant Professor \& Former Head\\
+    Department of ECE, RUET\\
+    \href{mailto:fariya@ece.ruet.ac.bd}{fariya@ece.ruet.ac.bd}\\
+    (+880) 1303 086970
+\end{minipage}
+
+\vspace{0.6cm}
+\begin{center}
+    {\footnotesize \textit{\color{gray} Last Updated: December 2025}}
+\end{center}
+
+\end{document}
